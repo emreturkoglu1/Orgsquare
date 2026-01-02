@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Org² | Premium Team Workspace</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-light: #e0e7ff;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --grid-color: rgba(99, 102, 241, 0.05);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        
+        /* Modern Grid Background */
+        body { 
+            background-color: #ffffff;
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 40px 40px; /* Size of the grid squares */
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.5rem 8%; max-width: 1400px; margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px);
+            position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #f1f5f9;
+        }
+        .logo { font-size: 1.8rem; font-weight: 900; letter-spacing: -1.5px; }
+        .logo span { color: var(--primary); }
+
+        header {
+            text-align: center; padding: 10rem 5% 6rem;
+            max-width: 1200px; margin: 0 auto;
+        }
+        .badge {
+            background: var(--primary-light); color: var(--primary); padding: 0.6rem 1.2rem;
+            border-radius: 99px; font-weight: 700; font-size: 0.85rem;
+            display: inline-block; margin-bottom: 2rem; text-transform: uppercase;
+        }
+        h1 { font-size: clamp(3rem, 8vw, 5.5rem); font-weight: 900; letter-spacing: -4px; line-height: 0.9; margin-bottom: 2rem; }
+        .formula { font-size: 1.5rem; font-weight: 700; color: var(--gray); margin-bottom: 3rem; }
+        .formula b { color: var(--primary); }
+
+        /* Live Demo Section */
+        .demo-section { padding: 4rem 8% 8rem; }
+        .demo-container {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+        }
+        .phone-mockup {
+            width: 300px; height: 620px; background: #000; border: 12px solid #1e293b;
+            border-radius: 45px; margin: 0 auto; position: relative; overflow: hidden;
+            box-shadow: 0 50px 100px -20px rgba(99, 102, 241, 0.2);
+        }
+        .phone-mockup video { width: 100%; height: 100%; object-fit: cover; }
+        .phone-notch {
+            position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+            width: 120px; height: 28px; background: #1e293b; border-bottom-left-radius: 18px;
+            border-bottom-right-radius: 18px; z-index: 10;
+        }
+
+        /* Tech Stack Section */
+        .tech-stack {
+            padding: 6rem 8%; text-align: center;
+        }
+        .tech-grid {
+            display: flex; justify-content: center; gap: 3rem; margin-top: 3rem; flex-wrap: wrap;
+        }
+        .tech-item {
+            background: white; border: 1px solid #e2e8f0; padding: 1.5rem 3rem;
+            border-radius: 16px; font-weight: 800; font-size: 1.2rem; color: var(--dark);
+        }
+
+        /* Bento Features */
+        .features { padding: 4rem 8% 10rem; max-width: 1400px; margin: 0 auto; }
+        .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .card { background: white; border: 1px solid #e2e8f0; padding: 2.5rem; border-radius: 32px; transition: 0.4s; }
+        .card:hover { border-color: var(--primary); transform: translateY(-10px); box-shadow: 0 30px 60px -12px rgba(99, 102, 241, 0.15); }
+        .wide { grid-column: span 2; background: var(--dark); color: white; border: none; }
+        .wide h3 { color: white; font-size: 2.5rem; margin-bottom: 1.5rem; }
+        .card h3 { font-size: 1.8rem; margin-bottom: 1rem; color: var(--primary); letter-spacing: -1px; }
+
+        footer {
+            padding: 5rem 8%; border-top: 1px solid #eee; background: white;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .team-info label { font-size: 0.7rem; font-weight: 900; text-transform: uppercase; color: var(--gray); display: block; }
+        .team-info p { font-size: 1.2rem; font-weight: 700; }
+
+        @media (max-width: 1000px) {
+            .demo-container, .bento-grid { grid-template-columns: 1fr; }
+            .wide { grid-column: span 1; }
+            header { padding-top: 6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Org<span>²</span></div>
+        <div style="font-weight: 600; color: var(--gray);">Unified Team Platform</div>
+    </nav>
+
+    <header>
+        <div class="badge">Organizing Necessities for Organizations</div>
+        <h1>Seamless Workspace <br> for Modern Teams.</h1>
+        <p class="formula">Meetings + Decisions + Notes + Reminders = <b>Org²</b></p>
+    </header>
+
+    <section class="demo-section">
+        <div class="demo-container">
+            <div class="demo-text">
+                <h2 style="font-size: 3rem; letter-spacing: -2px; margin-bottom: 1.5rem;">See it in Action</h2>
+                <p style="color: var(--gray); font-size: 1.2rem; margin-bottom: 2rem;">
+                    Watch how Org² handles everything from instant organization setup to real-time decision making. One app, no distractions.
+                </p>
+                <div style="display: flex; gap: 15px;">
+                    <div style="width: 4px; background: var(--primary); border-radius: 2px;"></div>
+                    <p style="font-style: italic; color: var(--gray);">"Meet, decide, note, and remind all together."</p>
+                </div>
+            </div>
+            <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <video autoplay muted loop playsinline>
+                    <source src="demo_video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-stack">
+        <h2 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 3px; color: var(--gray);">Powered By</h2>
+        <div class="tech-grid">
+            <div class="tech-item">Flutter</div>
+            <div class="tech-item">Firebase</div>
+            <div class="tech-item">Jitsi SDK</div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="bento-grid">
+            <div class="card wide">
+                <h3>One Workspace. No App-Switching.</h3>
+                <p style="font-size: 1.2rem; opacity: 0.7;">Teams waste time switching between platforms. Org² provides a unified board for notes, integrated video calls, and real-time voting mechanisms.</p>
+            </div>
+            <div class="card">
+                <h3>Meetings</h3>
+                <p>HD Video calls powered by Jitsi Meet SDK for Flutter.</p>
+            </div>
+            <div class="card">
+                <h3>Decisions</h3>
+                <p>Transparent polling and voting for collaborative teams.</p>
+            </div>
+            <div class="card">
+                <h3>Notes</h3>
+                <p>A common digital board for real-time idea sharing.</p>
+            </div>
+            <div class="card">
+                <h3>Reminders</h3>
+                <p>Admin-scheduled notifications for deadlines and events.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <div class="logo">Org<span>²</span></div>
+            <p style="color: var(--gray); font-size: 0.9rem;">Organizing Necessities for Organizations</p>
+        </div>
+        <div class="team-info">
+            <label>Developers</label>
+            <p>AudiTT</p>
+        </div>
+    </footer>
+
+</body>
+</html>
